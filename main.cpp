@@ -69,7 +69,7 @@ map<char, pair<char,W>> BellmanFord(Graph<W> graph, char source, W MAX)
     {
       if(solution[e.source].second + e.weight <= solution[e.destiny].second)
       {
-        solution[e.destiny] = {e.destiny, solution[e.source].second + e.weight};
+        solution[e.destiny] = {e.source, solution[e.source].second + e.weight};
       }
     }
   }
