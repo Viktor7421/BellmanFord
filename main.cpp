@@ -56,31 +56,22 @@ map<char, pair<char,W>> BellmanFord(Graph<W> graph, char source, W MAX)
   {
     solution[v] = {source, MAX};
   }
-
+  
   // Actualiza el primer vertice con un peso de viaje 0
 
   solution[source] = {source, 0};
 
-  list<char> temp;
-  temp.push_back(source);
+  // Recorre todos las aristas actualizando los viajes en función de la solución y esto se itera por la cantidad de vertices
 
-  // Actualiza los demas vertices en función de los vertices ya visitados
-
-  while(!temp.empty())
+  for(char v : vertices)
   {
-    auto _source = temp.front();
     for(Edge e : edges)
     {
-      if(e.source == _source)
+      if(solution[e.source].second + e.weight <= solution[e.destiny].second)
       {
-        if(solution[_source].second + e.weight <= solution[e.destiny].second)
-        {
-          solution[e.destiny] = {_source, solution[_source].second + e.weight};
-          temp.push_back(e.destiny);
-        }
+        solution[e.destiny] = {e.destiny, solution[e.source].second + e.weight};
       }
     }
-    temp.pop_front();
   }
 
   return solution;
