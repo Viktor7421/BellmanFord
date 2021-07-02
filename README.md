@@ -1,6 +1,6 @@
 # BellmanFord
 
-![imagen de muestra](/imgs/img.jpg)
+![imagen de muestra](/imgs/img.png)
 
 Este código es un algoritmo de Bellman Ford que nos ayuda a resolver el grafo presentado. Además la función tiene la capacidad de resolver cualquier grafo que se le envia al igual que un Bellmand Ford.
 
