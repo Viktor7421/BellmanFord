@@ -1,4 +1,4 @@
-# BellmanFord
+# Bellman Ford
 
 ![imagen de muestra](/imgs/img.png)
 
@@ -81,6 +81,6 @@ map<char, pair<char,W>> BellmanFord(Graph<W> graph, char source, W MAX)
 ```
 
 ### Complejidad de Tiempo
-El código cumple con la complejidad del Bellmand Ford que es **O(VE)** siendo V los vertices del grafo y E las aristas del grafo.
+El código cumple con la complejidad del Bellman Ford que es **O(VE)** siendo V los vertices del grafo y E las aristas del grafo.
 
 
